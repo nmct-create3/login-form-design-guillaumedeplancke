@@ -2,12 +2,23 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 600;
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+}
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
 
 :root {
-
 }
 
 /* CSS variables here */
@@ -25,12 +36,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: Inter, arial, sans-serif;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #f5f6fa;
 }
 
 *,
@@ -47,13 +58,13 @@ html {
 */
 
 ::-moz-selection {
-    background: HotPink;
+    background: #3385ff;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385ff;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +169,18 @@ hr {
 }
 
 a {
-    color: HotPink;
-    transition: all .1s ease-in-out;
+    color: #3385ff;
+    transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #1a5cc1;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #1a5cc1;
 }
 
 /*------------------------------------*\
@@ -451,7 +462,6 @@ a:focus {
 */
 
 .c-input {
-
 }
 
 .c-input:focus {
@@ -464,13 +474,11 @@ a:focus {
 */
 
 .c-label {
-
 }
 
 /* If a input is focused within the form-field class change te color of the label */
 
 .c-form-field:focus-within .c-label {
-
 }
 
 /*
@@ -480,23 +488,18 @@ a:focus {
 */
 
 .c-button {
-
 }
 
 .c-button:hover {
-
 }
 
 .c-button:focus {
-
 }
 
 .c-button:active {
-
 }
 
 .c-button--block {
-
 }
 
 /*------------------------------------*\
@@ -576,7 +579,6 @@ a:focus {
 .u-max-width-none {
     max-width: none !important;
 }
-
 
 /*
     Utilities: align
@@ -855,18 +857,18 @@ No media query since this is the default in mobile first design
         text-decoration: underline;
     }
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
     /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+    a[href^='#']:after,
+    a[href^='javascript:']:after {
+        content: '';
     }
     pre {
         white-space: pre-wrap !important;
